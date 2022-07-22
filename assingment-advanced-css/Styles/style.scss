@@ -1,0 +1,36 @@
+@import "style-colors";
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200&family=Lato:wght@300;400&display=swap');
+@import "./header";
+@import "./main";
+@import "./footer";
+
+body {
+    background-color: $background-color;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.parent {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+                        "header"
+                        "main"
+                        "footer";
+}
+
+header {
+    grid-area: "header";
+}
+
+main {
+    grid-area: "main";
+}
+
+footer {
+    grid-area: "footer";
+}

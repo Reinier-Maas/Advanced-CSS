@@ -1,0 +1,136 @@
+.main-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    background-size: auto;
+    position: relative;
+}
+
+.box {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: inline-block;
+}
+
+.box:hover .overlay {
+    opacity: 1;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+
+}
+
+.img-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 5px;
+    width: 30%;
+    height: 10%;
+    font-size: 100%;
+    cursor: pointer;
+}
+
+.overlay {
+    position: absolute;
+    transition: all 500ms ease;
+    opacity: 0;
+    background-color: $button-color;
+    border-radius: 10px;
+}
+
+.overlayfade {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: $button-color;
+}
+
+.box:hover .overlayfade {
+    width: 100%;
+    height: 100%;
+}
+
+.img-parent {
+    height: 100vh;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    grid-template-areas:
+                        "one"
+                        "two"
+                        "three"
+                        "four"
+                        "five"
+                        "six"
+                        "seven";
+}
+
+.img-one {
+    grid-area: "one";
+}
+
+.img-two {
+    grid-area: "two";
+}
+
+.img-three {
+    grid-area: "three";
+}
+
+.img-four {
+    grid-area: "four";
+}
+
+.img-five {
+    grid-area: "five";
+}
+
+.img-six {
+    grid-area: "six";
+}
+
+.img-seven {
+    grid-area: "seven";
+}
+
+@media (min-width: 768px) {
+    .img-parent {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+                            "one two"
+                            "three four"
+                            "five six"
+                            "seven .";
+    }
+    .img-btn {
+        width: 35%;
+        height: 15%;
+        font-size: 90%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .img-parent {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+                            "one two three"
+                            "four five six"
+                            "seven . .";
+    }
+}
