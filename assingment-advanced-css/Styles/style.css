@@ -39,8 +39,6 @@ article h5 {
 .main-container {
   display: flex;
   justify-content: center;
-  width: 100%;
-  padding: 10px;
   background-size: auto;
   position: relative;
 }
